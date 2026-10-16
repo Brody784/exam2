@@ -26,8 +26,20 @@ public class Problem2 {
 	}
 	
 	public static int[] interleave(int[] array1, int[] array2) {
+		int index;
+		int times = 0;
+		int[] total =new int [array1.length + array2.length];
 		
-		return null;
+		for(index = 0; index < total.length - 5; index++) {
+			
+			total[times] = array1[index];
+			times++;
+			total[times] = array2[index];
+			times++;
+			
+		}
+		
+		return total;
 	}
 
 }

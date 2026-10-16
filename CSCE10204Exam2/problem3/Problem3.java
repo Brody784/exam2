@@ -26,8 +26,39 @@ public class Problem3 {
 	}
 	
 	public static String[] split(String str, char delim) {
+		int index;
+		int count = 0;
+		String hero = "";
 		
-		return null;
+		
+		String[] hold = new String[4];
+		
+		
+		for(index = 0; index < str.length(); index++) {
+			
+			if(str.charAt(index) != delim) {
+				hero += str.charAt(index);
+				count++;
+			}else {
+				hero += " ";
+				break;
+				
+			}
+		}
+		hold[0] = hero;
+		for(index = count; index < str.length(); index++) {
+			
+			if(str.charAt(index) != delim) {
+				hero += str.charAt(index);
+			}else {
+				hero += " ";
+				break;
+				
+			}
+		}
+		hold[1] = hero;
+		
+		return hold;
 	}
 
 }
